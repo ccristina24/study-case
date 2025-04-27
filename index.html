@@ -2,21 +2,21 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Custom kleur</title>
+    <title>Study case</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              blue: "#5B7DBC",
+              'blue': "#5B7DBC",
               "light-blue": "#EAF4FF",
               "dark-blue": "#39496F",
-              green: "#7EDA75",
-              yellow: "#E6CE14",
-              red: "#E13B4F",
+              'green': "#7EDA75",
+              'yellow': "#E6CE14",
+              'red': "#E13B4F",
               "dark-red": "#7F354A",
-              purple: "#871D52",
+              'purple': "#871D52",
             },
           },
         },
@@ -24,8 +24,119 @@
     </script>
   </head>
 
-<body>
-  
-  <h1 class="text-blue"> This is my color.</h1>
-</body>
+  <body class="flex items-center justify-center min-h-screen">
+    <div
+      class="bg-light-blue w-[375px] rounded-3xl overflow-hidden shadow-lg p-4"
+    >
+      <!-- HEADER -->
+      <div class="bg-blue rounded-3xl p-4 flex flex-col items-start text-white">
+        <div class="flex justify-between w-full items-center">
+          <div>
+            <h1 class="text-xl font-bold">Goodmorning, Alex!</h1>
+            <div class="flex items-center mt-2 space-x-2">
+              <img
+                src="/images/user.png"
+                alt="Avatar"
+                class="w-8 h-8 rounded-full object-cover"
+              />
+              <div class="flex-1">
+                <div class="h-2 bg-white/70 rounded-full w-24 mb-1">
+                  <div class="bg-dark-blue h-2 rounded-full w-1/2"></div>
+                </div>
+                <span class="text-xs">300 XP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="bg-white text-blue font-semibold mt-4 py-2 px-6 rounded-lg shadow transition hover:shadow-lg hover:bg-light-blue hover:scale-105"
+        >
+          SEE PROGRESS
+        </button>
+      </div>
+
+      <!-- OVERVIEW -->
+      <div class="mt-4">
+        <h2 class="text-lg font-bold flex items-center mb-4">📚 Overview</h2>
+        <div class="flex space-x-3 overflow-x-auto pb-2">
+          <button
+            class="flex-shrink-0 bg-white rounded-2xl shadow-md px-6 py-6 text-sm font-semibold transition hover:bg-light-blue hover:shadow-lg"
+          >
+            LEARN NOTES
+          </button>
+          <button
+            class="flex-shrink-0 bg-white rounded-2xl shadow-md px-6 py-6 text-sm font-semibold"
+          >
+            PLAY SONGS
+          </button>
+          <button
+            class="flex-shrink-0 bg-white rounded-2xl shadow-md px-6 py-6 text-sm font-semibold"
+          >
+            MINI-GAMES
+          </button>
+        </div>
+      </div>
+
+      <!-- DAILY CHALLENGE -->
+      <div class="mt-6">
+        <div class="flex justify-between items-center mb-2">
+          <h2 class="text-lg font-bold flex items-center">
+            🎯 Daily Challenge
+          </h2>
+          <a href="#" class="text-sm text-gray-500">See All</a>
+        </div>
+        <p class="text-sm text-gray-600 mb-2">
+          A new fun music challenge every day!
+        </p>
+        <p class="text-sm font-bold text-yellow mb-4">1 / 3 Done</p>
+
+        <div
+          class="bg-blue rounded-2xl p-4 text-white flex items-center justify-between"
+        >
+          <div>
+            <h3 class="font-bold">MUSICAL NOTES</h3>
+            <p class="text-xs mb-2">10 questions</p>
+            <div class="h-2 bg-white/30 rounded-full w-32 mb-2">
+              <div class="bg-yellow-400 h-2 rounded-full w-1/3"></div>
+            </div>
+            <button
+              class="bg-gray-100 text-black font-semibold text-xs py-2 px-6 rounded-lg mt-2 flex items-center"
+            >
+              LET'S GO! 🎤
+            </button>
+          </div>
+       
+        </div>
+      </div>
+
+      <!-- LEVELS -->
+      <div class="mt-6">
+        <h2 class="text-lg font-bold flex items-center">
+          ⚡ Find the right beat for you!
+        </h2>
+        <p class="text-sm text-gray-600 mb-4">Learn at your own pace</p>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div
+            class="bg-green rounded-2xl p-4 text-center text-white font-bold"
+          >
+            EASY <br /><span class="text-xs font-normal">2-3 min</span>
+          </div>
+          <div
+            class="bg-yellow rounded-2xl p-4 text-center text-white font-bold"
+          >
+            MEDIUM <br /><span class="text-xs font-normal">5-7 min</span>
+          </div>
+          <div class="bg-red rounded-2xl p-4 text-center text-white font-bold">
+            HARD <br /><span class="text-xs font-normal">10-13 min</span>
+          </div>
+          <div
+            class="bg-purple rounded-2xl p-4 text-center text-white font-bold"
+          >
+            EXTREME <br /><span class="text-xs font-normal">10-13 min</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
