@@ -1,26 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Custom kleur</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'mijnkleur': '#ff6600',
-                    }
-                }
-            }
-        }
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: "#5B7DBC",
+              "light-blue": "#EAF4FF",
+              "dark-blue": "#39496F",
+              green: "#7EDA75",
+              yellow: "#E6CE14",
+              red: "#E13B4F",
+              "dark-red": "#7F354A",
+              purple: "#871D52",
+            },
+          },
+        },
+      };
     </script>
-
-</head>
+  </head>
 
 <body>
-    <h1 class="text-mijnkleur text-3xl font-bold">Dit is mijn kleur!</h1>
+  
+  <h1 class="text-blue"> This is my color.</h1>
 </body>
-
 </html>
