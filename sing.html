@@ -4,23 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sing with Ted</title>
-  <link rel="stylesheet" href="sing-style.css">
+  <link rel="stylesheet" href="sing.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              blue: "#5B7DBC",
+              "light-blue": "#EAF4FF",
+              "dark-blue": "#39496F",
+              green: "#7EDA75",
+              yellow: "#E6CE14",
+              red: "#E13B4F",
+              "dark-red": "#7F354A",
+              purple: "#871D52",
+            },
+          },
+        },
+      };
+    </script>
 </head>
 <body>
-
+    <div
+      class="relative w-[393px] h-[850px] border-[10px] border-gray-900 rounded-[48px] overflow-hidden shadow-xl"
+    >
   <div class="phone">
-    <!-- Status bar -->
-    <div class="status-bar">
-      <div class="time">9:41</div>
-      <div class="icons">
-        <img src="assets/Cellular Connection.png" alt="Cellular" class="icon">
-        <img src="assets/Wifi.png" alt="WiFi" class="icon">
-        <div class="battery">
-          <div class="battery-level"></div>
-          <div class="battery-cap"></div>
-        </div>
-      </div>
-    </div>
+    <!-- Dynamic Island -->
+    <div
+    class="absolute top-2 left-1/2 -translate-x-1/2 w-[120px] h-[35px] bg-gray-900 rounded-[18px] z-10 "
+  ></div>
+
+  <!-- Status bar-->
+  <div class="flex justify-between px-4 pt-12 pb-1 text-sm bg-blue">
+    <div>9:41</div>
+    <div class="pr-6">100%</div>
+  </div>
+  
+
+
+  
 
     <!-- Main content -->
     <div class="main-content">
@@ -124,6 +147,7 @@
       startBearTurn();
     };
   </script>
+  </div>
 
 </body>
 </html>
