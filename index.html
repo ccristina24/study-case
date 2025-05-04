@@ -44,15 +44,13 @@
       <div class="h-[calc(100%-70px)] overflow-y-auto bg-light-blue">
         <div class="p-4">
           <!-- HEADER -->
-          <div
-            class="bg-blue rounded-3xl p-4 flex flex-col items-start text-white"
-          >
-            <div class="flex justify-between w-full items-center">
+          <div class="bg-blue rounded-3xl p-4 flex flex-row items-center gap-6">
+            <div class="flex flex-col items-start text-white">
               <div>
                 <h1 class="text-xl font-bold">Goodmorning, Alex!</h1>
                 <div class="flex items-center mt-2 space-x-2">
                   <img
-                    src="/images/user.png"
+                    src="images/user.png"
                     alt="Avatar"
                     class="w-8 h-8 rounded-full object-cover"
                   />
@@ -64,12 +62,20 @@
                   </div>
                 </div>
               </div>
+              <button
+                class="bg-white text-blue font-semibold mt-4 py-2 px-6 rounded-lg shadow"
+              >
+                SEE PROGRESS
+              </button>
             </div>
-            <button
-              class="bg-white text-blue font-semibold mt-4 py-2 px-6 rounded-lg shadow"
-            >
-              SEE PROGRESS
-            </button>
+
+            <div>
+              <img
+                src="images/urs5.png"
+                alt="Bear"
+                class="w-24 h-24 object-cover"
+              />
+            </div>
           </div>
 
           <!-- OVERVIEW -->
@@ -110,7 +116,7 @@
             <p class="text-sm font-bold text-yellow mb-4">1 / 3 Done</p>
 
             <div
-              class="bg-blue rounded-2xl p-4 text-white flex items-center justify-between"
+              class="bg-blue rounded-2xl p-4 text-white flex flex-row items-center justify-between"
             >
               <div>
                 <h3 class="font-bold">MUSICAL NOTES</h3>
@@ -124,6 +130,14 @@
                   LET'S GO! 🎤
                 </button>
               </div>
+
+              <div>
+                <img
+                  src="images/urs3.png"
+                  alt="Bear"
+                  class="w-26 h-24 object-fill"
+                />
+              </div>
             </div>
           </div>
 
@@ -135,30 +149,63 @@
             <p class="text-sm text-gray-600 mb-4">Learn at your own pace</p>
 
             <div class="grid grid-cols-2 gap-3">
+              <!-- EASY -->
               <div
-                class="bg-green rounded-2xl p-3 text-center text-white font-bold"
+                class="bg-green rounded-2xl p-3 flex flex-row items-center gap-2"
               >
-                EASY <br /><span class="text-xs font-normal">2-3 min</span>
+                <img
+                  src="images/urs6.png"
+                  alt="Bear"
+                  class="w-12 h-12 object-contain"
+                />
+                <div class="text-center text-white font-bold">
+                  EASY <br /><span class="text-xs font-normal">2-3 min</span>
+                </div>
               </div>
+
+              <!-- MEDIUM -->
               <div
-                class="bg-yellow rounded-2xl p-3 text-center text-dark-blue font-bold"
+                class="bg-yellow rounded-2xl p-3 flex flex-row items-center gap-2"
               >
-                MEDIUM <br /><span class="text-xs font-normal">5-7 min</span>
+                <img
+                  src="images/urs4.png"
+                  alt="Bear"
+                  class="w-12 h-12 object-contain"
+                />
+                <div class="text-center text-dark-blue font-bold">
+                  MEDIUM <br /><span class="text-xs font-normal">5-7 min</span>
+                </div>
               </div>
+
+              <!-- HARD -->
               <div
-                class="bg-red rounded-2xl p-3 text-center text-white font-bold"
+                class="bg-red rounded-2xl p-3 flex flex-row items-center gap-2"
               >
-                HARD <br /><span class="text-xs font-normal">10-13 min</span>
+                <img
+                  src="images/urs8.png"
+                  alt="Bear"
+                  class="w-12 h-12 object-contain"
+                />
+                <div class="text-center text-white font-bold">
+                  HARD <br /><span class="text-xs font-normal">10-13 min</span>
+                </div>
               </div>
+
+              <!-- EXTREME -->
               <div
-                class="bg-purple rounded-2xl p-3 text-center text-white font-bold"
+                class="bg-purple rounded-2xl p-3 flex flex-row items-center gap-2"
               >
-                EXTREME <br /><span class="text-xs font-normal">15+ min</span>
+                <img
+                  src="images/urs6.png"
+                  alt="Bear"
+                  class="w-12 h-12 object-contain"
+                />
+                <div class="text-center text-white font-bold">
+                  EXTREME <br /><span class="text-xs font-normal">15+ min</span>
+                </div>
               </div>
             </div>
           </div>
-
-        
         </div>
       </div>
     </div>
