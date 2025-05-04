@@ -1,0 +1,251 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Montserrat', sans-serif;
+}
+  
+/* PHONE CONTAINER */
+.phone {
+    background-color: #5b7dbc;
+    width: 393px;
+    height: 852px;
+    border-radius: 40px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+  
+/* STATUS BAR */
+.status-bar {
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+}
+  
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+  
+.icon {
+    width: 18px;
+    height: 18px;
+}
+  
+.battery {
+    position: relative;
+    width: 24px;
+    height: 12px;
+    border: 2px solid white;
+    border-radius: 3px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+}
+  
+.battery-level {
+    background-color: white;
+    width: 70%;
+    height: 60%;
+    margin-left: 2px;
+}
+  
+.battery-cap {
+    position: absolute;
+    right: -4px;
+    width: 2px;
+    height: 6px;
+    background-color: white;
+    border-radius: 1px;
+}
+  
+
+.main-content {
+    position: relative;
+    padding: 20px;
+}
+  
+.main-title {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.4;
+    margin-top: 30px;
+    width: 250px;
+}
+  
+.bear {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    width: 140px;
+    height: auto;
+}
+  
+/* CATEGORY SCROLL */
+.categories-scroll {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    margin-top: 30px;
+    padding-bottom: 10px;
+}
+  
+.categories-scroll::-webkit-scrollbar {
+    display: none;
+}
+  
+.category-card {
+    background-color: white;
+    width: 180px;
+    height: 140px;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
+    flex: 0 0 auto;
+}
+  
+.category-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+  
+
+.category-image-left {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    width: 50px;
+    height: auto;
+}
+  
+.category-image-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    width: 50px;
+    height: auto;
+}
+  
+.category-image-center {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: auto;
+}
+
+
+.bottom-section {
+    background-color: white;
+    border-radius: 40px 40px 0 0;
+    padding: 20px;
+    margin-top: auto;
+    position: relative;
+    height: 450px;
+    overflow-y: auto;
+}
+
+.home-indicator {
+    background-color: black;
+    width: 120px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.lessons-header {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.lessons-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: black;
+}
+
+
+.lesson-card {
+    background-color: #f5f5f5;
+    border: 2px solid rgba(134, 172, 212, 0.5);
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 5px 5px 7px rgba(0,0,0,0.2),
+                -2px -2px 2px #ebf0f5;
+    position: relative;
+}
+
+.lesson-image {
+    width: 80px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.lesson-content {
+    flex-grow: 1;
+}
+
+.lesson-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+}
+
+.lesson-subtitle {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.progress-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #86acd4 0%,
+        #86acd4 var(--progress),
+        #ffffff var(--progress),
+        #ffffff 100%
+    );
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: black;
+    position: relative;
+}
+
+.progress-text {
+    position: absolute;
+    text-align: center;
+}

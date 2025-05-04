@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Lessons App</title>
+  <link rel="stylesheet" href="categories.css">
+</head>
+<body>
+
+  <div class="phone">
+    <!-- Status bar -->
+    <div class="status-bar">
+      <div class="time">9:41</div>
+      <div class="icons">
+        <img src="assets/Cellular Connection.png" alt="Cellular" class="icon">
+        <img src="assets/Wifi.png" alt="WiFi" class="icon">
+        <div class="battery">
+          <div class="battery-level"></div>
+          <div class="battery-cap"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <p class="main-title">Select which category<br>you want to learn today</p>
+
+      <!-- Audio elements (hidden) -->
+      <audio id="sound-bear-top" src="assets/piano-g-6200.mp3"></audio>
+      <audio id="sound-bear-bottom" src="assets/do-80236.mp3"></audio>
+
+      <!-- First bear image (top) -->
+      <img src="assets/urs5.png" alt="Bear" class="bear" onmouseenter="playTopBearSound()">
+
+      <!-- Category scroll area -->
+      <div class="categories-scroll">
+        <div class="category-card">
+          <p class="category-title">Musical Notes & Pitch</p>
+          <img src="assets/music-304709_1280 1.png" alt="Music" class="category-image-left">
+          <img src="assets/musical-25706_1280 1.png" alt="Musical" class="category-image-right">
+        </div>
+
+        <div class="category-card">
+          <p class="category-title">Musical Creativity & Improvisation</p>
+          <img src="assets/idea-48100_1280 1.png" alt="Idea" class="category-image-center">
+        </div>
+
+        <div class="category-card">
+          <p class="category-title">Music History & Composers</p>
+          <img src="assets/wolfgang-amadeus-mozart-154829_1280 1.png" alt="Mozart" class="category-image-center">
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom white section -->
+    <div class="bottom-section">
+      <div class="home-indicator"></div>
+
+      <div class="lessons-header">
+        <h2 class="lessons-title">Lessons</h2>
+      </div>
+
+      <!-- Lesson 1 -->
+      <div class="lesson-card">
+        <!-- Second bear image (bottom) -->
+        <img src="assets/urs7.png" alt="Lesson Image" class="lesson-image" onmouseenter="playBottomBearSound()">
+        <div class="lesson-content">
+          <p class="lesson-title">Meet the Musical Notes!</p>
+          <p class="lesson-subtitle">Lesson 1</p>
+        </div>
+        <div class="progress-circle" style="--progress: 64%;">
+          <div class="progress-text">64%</div>
+        </div>
+      </div>
+
+      <!-- Lesson 2 -->
+      <div class="lesson-card">
+        <div class="lesson-content">
+          <p class="lesson-title">Sing with Ted!</p>
+          <p class="lesson-subtitle">Lesson 2</p>
+        </div>
+        <div class="progress-circle" style="--progress: 82%;">
+          <div class="progress-text">82%</div>
+        </div>
+      </div>
+
+      <!-- Lesson 3 -->
+      <div class="lesson-card">
+        <div class="lesson-content">
+          <p class="lesson-title">Jingle Bells Quiz!</p>
+          <p class="lesson-subtitle">Lesson 3</p>
+        </div>
+        <div class="progress-circle" style="--progress: 38%;">
+          <div class="progress-text">38%</div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Small script to handle sounds -->
+  <script>
+    function playTopBearSound() {
+      const soundTop = document.getElementById('sound-bear-top');
+      soundTop.currentTime = 0;
+      soundTop.play();
+    }
+
+    function playBottomBearSound() {
+      const soundBottom = document.getElementById('sound-bear-bottom');
+      soundBottom.currentTime = 0;
+      soundBottom.play();
+    }
+  </script>
+
+</body>
+</html>

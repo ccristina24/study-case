@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sing with Ted</title>
+  <link rel="stylesheet" href="sing-style.css">
+</head>
+<body>
+
+  <div class="phone">
+    <!-- Status bar -->
+    <div class="status-bar">
+      <div class="time">9:41</div>
+      <div class="icons">
+        <img src="assets/Cellular Connection.png" alt="Cellular" class="icon">
+        <img src="assets/Wifi.png" alt="WiFi" class="icon">
+        <div class="battery">
+          <div class="battery-level"></div>
+          <div class="battery-cap"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="main-content">
+      <h1 class="page-title">Sing with Ted!</h1>
+
+      <!-- White card -->
+      <div class="white-card">
+        <img src="assets/urs5.png" alt="Bear" class="bear">
+        <img src="assets/dialogue-window-148172-1280-1.png" alt="Dialogue" class="dialogue">
+        <p class="dialogue-text">
+          "Ready to sing? 🎤"
+        </p>
+
+        <div class="microphone-button" onclick="micClicked()">
+          <img src="assets/mic.png" alt="Microphone" class="microphone-icon">
+        </div>
+      </div>
+
+      
+      <div class="slider-container">
+        <input type="range" min="0" max="100" value="50" class="slider">
+      </div>
+
+      
+      <button id="downloadButton" onclick="downloadSong()" style="display: none;">Download My Song</button>
+
+    </div>
+
+    
+    <div class="home-indicator"></div>
+
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+    const bearLines = [
+      { text: "Let's ride through the snowy skies!", sound: "assets/bear-line-1.wav" },
+      { text: "Twinkling stars, let's harmonize!", sound: "assets/bear-line-2.wav" },
+      { text: "Dancing through the clouds, oh my!", sound: "assets/bear-line-3.wav" }
+    ];
+
+    const userLines = [];
+    const fullSong = [];
+    let turn = 'bear'; // Bear starts first
+    let linesCount = 0; // Track number of lines
+
+    function startBearTurn() {
+      const randomIndex = Math.floor(Math.random() * bearLines.length);
+      const bear = bearLines[randomIndex];
+
+      // Show bear line
+      document.querySelector('.dialogue-text').innerText = `"${bear.text}"`;
+      fullSong.push("Bear: " + bear.text);
+
+      // Play bear's singing voice
+      const audio = new Audio(bear.sound);
+      audio.play();
+
+      setTimeout(() => {
+        document.querySelector('.dialogue-text').innerText = "Your turn! Click the mic 🎤";
+        turn = 'user';
+      }, 3000);
+    }
+
+    function userTurn() {
+      const userInput = prompt("🎤 Sing your next line (type your lyrics here):");
+      if (userInput) {
+        document.querySelector('.dialogue-text').innerText = `"${userInput}"`;
+        fullSong.push("You: " + userInput);
+        linesCount++;
+
+        setTimeout(() => {
+          startBearTurn();
+        }, 3000);
+
+        // Show download button if enough lines
+        if (linesCount >= 4) {
+          document.getElementById('downloadButton').style.display = 'block';
+        }
+      }
+    }
+
+    function micClicked() {
+      if (turn === 'user') {
+        userTurn();
+      }
+    }
+
+    function downloadSong() {
+      const text = fullSong.join("\n");
+      const element = document.createElement('a');
+      element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
+      element.setAttribute('download', 'my-song.txt');
+      document.body.appendChild(element);
+      element.click();
+      document.body.removeChild(element);
+    }
+
+    // Start the first bear line when page loads
+    window.onload = () => {
+      startBearTurn();
+    };
+  </script>
+
+</body>
+</html>
