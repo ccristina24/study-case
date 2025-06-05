@@ -30,6 +30,10 @@ Here’s the basic flow of the platform so far:
                               └──→ [Singing with Ted (exercise)]
 
 
+<img width="635" alt="Screenshot 2025-06-05 at 21 35 57" src="https://github.com/user-attachments/assets/7e5eef14-6e24-4093-b87d-d11c3d7d0a98" />
+
+
+
 
 🧠 Technical Notes
 
